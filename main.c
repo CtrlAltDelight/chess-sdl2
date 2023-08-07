@@ -39,10 +39,9 @@ int main(int argc, char* argv[]) {
 
 	// Run game
 	bool is_done = false;
-	SDL_Event event;
 	Piece** grid = init_grid();
 	while(!is_done) {
-		is_done = process_game_logic(renderer, textures, event, grid);
+		is_done = process_game_logic(renderer, textures, grid);
 	}
 	destroy_grid(grid);
 

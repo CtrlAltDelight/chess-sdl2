@@ -1,3 +1,4 @@
+#include <math.h>
 #include "sdl_utils.h"
 #include "game.h"
 
@@ -22,14 +23,9 @@ Piece** init_grid() {
 	grid[7][7] = (Piece) { .type = rook,   .color = black, .has_moved = false };
 
 	// initialize black pawns
-	grid[6][0] = (Piece) { .type = pawn, .color = black, .has_moved = false };
-	grid[6][1] = (Piece) { .type = pawn, .color = black, .has_moved = false };
-	grid[6][2] = (Piece) { .type = pawn, .color = black, .has_moved = false };
-	grid[6][3] = (Piece) { .type = pawn, .color = black, .has_moved = false };
-	grid[6][4] = (Piece) { .type = pawn, .color = black, .has_moved = false };
-	grid[6][5] = (Piece) { .type = pawn, .color = black, .has_moved = false };
-	grid[6][6] = (Piece) { .type = pawn, .color = black, .has_moved = false };
-	grid[6][7] = (Piece) { .type = pawn, .color = black, .has_moved = false };
+	for(int i = 0; i < 8; i++) {
+		grid[6][i] = (Piece) { .type = pawn, .color = black, .has_moved = false };
+	}
 
 	// Initialize major white pieces
 	grid[0][0] = (Piece) { .type = rook,   .color = white, .has_moved = false };
@@ -42,14 +38,9 @@ Piece** init_grid() {
 	grid[0][7] = (Piece) { .type = rook,   .color = white, .has_moved = false };
 
 	// initialize white pawns
-	grid[1][0] = (Piece) { .type = pawn, .color = white, .has_moved = false };
-	grid[1][1] = (Piece) { .type = pawn, .color = white, .has_moved = false };
-	grid[1][2] = (Piece) { .type = pawn, .color = white, .has_moved = false };
-	grid[1][3] = (Piece) { .type = pawn, .color = white, .has_moved = false };
-	grid[1][4] = (Piece) { .type = pawn, .color = white, .has_moved = false };
-	grid[1][5] = (Piece) { .type = pawn, .color = white, .has_moved = false };
-	grid[1][6] = (Piece) { .type = pawn, .color = white, .has_moved = false };
-	grid[1][7] = (Piece) { .type = pawn, .color = white, .has_moved = false };
+	for(int i = 0; i < 8; i++) {
+		grid[1][i] = (Piece) { .type = pawn, .color = white, .has_moved = false };
+	}
 
 	return grid;
 }
@@ -93,35 +84,172 @@ static void render_grid(SDL_Renderer* renderer, Piece** grid, Textures textures)
 	}
 }
 
-static void move_piece(Piece** grid, int orig_row, int orig_col, int row, int col) {
+static void move_piece(Piece** grid, enum Color* a_turn, Move* a_previous_move, int orig_row, int orig_col, int row, int col) {
 	// Do nothing if there is no move
 	if(orig_row == row && orig_col == col) {
 		return;
 	}
 
+	// Update piece position
 	grid[row][col] = grid[orig_row][orig_col];
 	grid[orig_row][orig_col] = (Piece) { .type = empty };
+	grid[row][col].has_moved = true;
+
+	// Update turn and previous move
+	*a_turn = (*a_turn == white) ? black : white;
+	*a_previous_move = (Move) { .type = grid[row][col].type, .row = row, .col = col, .is_check = false }; // TODO check for check
 }
 
 static void draw_dragged_piece(SDL_Renderer* renderer, Textures textures, Piece dragged_piece, int x, int y) {
 	SDL_Texture* texture = get_texture_for_piece(dragged_piece, textures);
-	SDL_Rect destination = { .x = x - (GRID_LENGTH / 4), .y = y - (GRID_LENGTH / 4), .w = GRID_LENGTH / 2, .h = GRID_LENGTH / 2};
+	SDL_Rect destination = { 
+		.x = x - (GRID_LENGTH / 4), // Render it centered on mouse
+		.y = y - (GRID_LENGTH / 4), 
+		.w = GRID_LENGTH / 2, // Make it half the size
+		.h = GRID_LENGTH / 2
+	};
 	SDL_RenderCopy(renderer, texture, NULL, &destination);
 }
 
+static bool is_on_or_outside_border(int x, int y) {
+	return y < BORDER_LENGTH || x < BORDER_LENGTH || y > BOARD_LENGTH - BORDER_LENGTH 
+	                                                           || x > BOARD_LENGTH - BORDER_LENGTH;
+}
+
+static bool is_not_check(Piece** grid, enum Color turn) {
+	// Find where king is at
+	int king_row;
+	int king_col;
+	for(int i = 0; i < 8; i++) {
+		bool found = false;
+		for(int j = 0; j < 8; j++) {
+			Piece curr_piece = grid[i][j];
+			if(curr_piece.type == king && curr_piece.color == turn) {
+				king_row = i;
+				king_col = j;
+				found = true;
+				break;
+			}
+		}
+		if(found) {
+			break;
+		}
+	}
+
+	// Evaluate if any pieces are attacking the king
+	bool is_check = false;
+	for(int i = 0; i < 8; i++) {
+		for(int j = 0; j < 8; j++) {
+			Piece curr_piece = grid[i][j];
+			is_check = check_valid_move(grid, curr_piece, (Move) {.type = rook}, i, j, king_row, king_col); // previous move doesn't matter
+			if(is_check) {
+				break;
+			}
+		}
+		if(is_check) {
+			break;
+		}
+	}
+	return !is_check;
+}
+
+bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_row, int start_col, int end_row, int end_col) {
+	// Invalid if attempting to capture own piece
+	Piece dest_piece = grid[end_row][end_col];
+	if(dest_piece.type != empty && dest_piece.color == piece.color) {
+		return false;
+	}
+	
+	if(piece.type == pawn) {
+		// Color matters
+		int color_modifier = (piece.color == white) ? 1 : -1;
+		bool is_en_passant = previous_move.type == pawn && abs(previous_move.col - start_col) == 1 && ((previous_move.row == 3 && piece.color == black) || (previous_move.row == 4 && piece.color == white));
+
+		// One square forward
+		if(end_row == start_row + color_modifier * 1 && end_col == start_col && grid[end_row][end_col].type == empty) {
+			check_for_check();
+		}
+		// Two squares forward
+		else if(piece.has_moved == false && end_row == start_row + color_modifier * 2 && end_col == start_col && grid[end_row][end_col].type == empty && grid[start_row + color_modifier][start_col].type == empty) {
+			check_for_check();
+		}
+		// Capture
+		else if(end_row == start_row + color_modifier * 1 && (end_col == start_col + 1 || end_col == start_col - 1) && (grid[end_row][end_col].type != empty || is_en_passant)) {
+			if(is_en_passant) {
+				grid[start_row][end_col].type = empty; // delete enemy pawn if en passant
+			}
+			check_for_check();
+		}
+	}
+	else if(piece.type == knight) {
+		if(abs(end_row - start_row) + abs(end_col - start_col) == 3) {
+			check_for_check();
+		}
+	}
+	else if(piece.type == bishop) {
+		for(int i = 1; i < abs(end_row - start_row); i++) {
+			int row_offset = (end_row > start_row) ? i : -i;
+			int col_offset = (end_col > start_col) ? i : -i;
+			if(grid[start_row + row_offset][start_col + col_offset].type != empty) {
+				return false;
+			}
+		}
+		if(abs(end_row - start_row) == abs(end_col - start_col)) {
+			return is_not_check(grid, piece.color);
+		}
+	}
+	else if(piece.type == rook) {
+		if(start_row == end_row && start_col != end_col) { // horizontal movement
+			int step = (end_col > start_col) ? 1 : -1;
+			for(int curr_col = start_col + step; curr_col != end_col; curr_col += step) {
+				if(grid[start_row][curr_col].type != empty) {
+					return false;
+				}
+			}
+			check_for_check();
+		}
+		else if(start_row != end_row && start_col == end_col) { // vertical movement
+			int step = (end_row > start_row) ? 1 : -1;
+			for(int curr_row = start_row + step; curr_row != end_row; curr_row += step) {
+				if(grid[curr_row][start_col].type != empty) {
+					return false;
+				}
+			}
+			check_for_check();
+		}
+	}
+	else if(piece.type == queen) {
+		Piece as_bishop = { .type = bishop, .color = piece.color, .has_moved = piece.has_moved };
+		Piece as_rook   = { .type = rook,   .color = piece.color, .has_moved = piece.has_moved };
+
+		return check_valid_move(grid, as_bishop, previous_move, start_row, start_col, end_row, end_col) ||
+			   check_valid_move(grid, as_rook,   previous_move, start_row, start_col, end_row, end_col);
+	}
+	else if(piece.type == king) {
+		if(abs(end_row - start_row) <= 1 && abs(end_col - start_col) <= 1) {
+			check_for_check();
+		}
+	}
+	return false;
+}
+
 // returning true exits the game
-bool process_game_logic(SDL_Renderer* renderer, Textures textures, SDL_Event event, Piece** grid) {
+bool process_game_logic(SDL_Renderer* renderer, Textures textures, Piece** grid) {
+	static SDL_Event event;
 	static bool dragging = false;
-	static int original_row = -1;
+	static int original_row = -1; // Used when dragging a piece
 	static int original_col = -1;
 	static Piece* dragged_piece = NULL;
 	static int mouse_x = 0;
 	static int mouse_y = 0;
+	static enum Color turn = white;
+	static Move previous_move;
 
 	// Clear and draw board
 	SDL_RenderClear(renderer);
 	SDL_RenderCopy(renderer, textures.board, NULL, NULL);
 
+	// Figure out game state
 	while (SDL_PollEvent(&event) != 0) {
 		if(event.type == SDL_QUIT) {
 			return true;
@@ -137,18 +265,22 @@ bool process_game_logic(SDL_Renderer* renderer, Textures textures, SDL_Event eve
 			// Get indices of the click
 			int row = (BOARD_LENGTH - click_y - BORDER_LENGTH - 1) / GRID_LENGTH;
 			int col = (BOARD_LENGTH - click_x - BORDER_LENGTH - 1) / GRID_LENGTH;
-			printf("Click Down\nrow: %d, col: %d\n\n", row, col);
 
 			// Check if out of bounds
-			bool on_border = click_y < BORDER_LENGTH || click_x < BORDER_LENGTH;
-			bool too_high = row > 7 || col > 7;
-			bool too_low = row < 0 || col < 0;
-			if(too_low || too_high || on_border) {
+			bool is_row_valid = 0 <= row && row <= 7;
+			bool is_col_valid = 0 <= col && col <= 7;
+			bool position_is_invalid = is_on_or_outside_border(click_x, click_y) || !is_col_valid || !is_row_valid;
+			if(position_is_invalid) {
 				continue;
 			}
 
 			// Check if there is a piece at the clicked square
 			if(grid[row][col].type == empty) {
+				continue;
+			}
+
+			// Check if the piece is of the right color
+			if(grid[row][col].color != turn) {
 				continue;
 			}
 
@@ -160,10 +292,11 @@ bool process_game_logic(SDL_Renderer* renderer, Textures textures, SDL_Event eve
 		if(event.type == SDL_MOUSEMOTION) {
 			mouse_x = event.motion.x;
 			mouse_y = event.motion.y;
-
-			// Update the drawn position of the piece (not actual board state)
 		}
 		if(event.type == SDL_MOUSEBUTTONUP && dragging) {
+			// Piece is no longer being dragged
+			dragging = false;
+
 			// Get position of click
 			int click_x = event.button.x;
 			int click_y = event.button.y;
@@ -171,26 +304,30 @@ bool process_game_logic(SDL_Renderer* renderer, Textures textures, SDL_Event eve
 			// Get indices of the click
 			int row = (BOARD_LENGTH - click_y - BORDER_LENGTH) / GRID_LENGTH;
 			int col = (BOARD_LENGTH - click_x - BORDER_LENGTH) / GRID_LENGTH;
-			bool on_border = click_y < BORDER_LENGTH || click_x < BORDER_LENGTH;
-			bool too_high = row > 7 || col > 7;
-			bool too_low = row < 0 || col < 0;
-			if(too_low || too_high || on_border) {
-				dragging = false;
+
+			// Check if the end position is valid
+			bool is_row_valid = 0 <= row && row <= 7;
+			bool is_col_valid = 0 <= col && col <= 7;
+			bool position_is_invalid = is_on_or_outside_border(click_x, click_y) || !is_col_valid || !is_row_valid;
+			if(position_is_invalid) {
 				dragged_piece = NULL;
 				continue;
 			}
 
-			// TODO check if move is legal
-			// Update board
-			move_piece(grid, original_row, original_col, row, col);
-			dragging = false;
+			// Check if move is legal and update accordingly
+			if(check_valid_move(grid, *dragged_piece, previous_move, original_row, original_col, row, col)) {
+				move_piece(grid, &turn, &previous_move, original_row, original_col, row, col);
+			}
 			dragged_piece = NULL;
 		}
 	}
 
+	// Draw dragged piece if needed
 	if(dragging && dragged_piece != NULL) {
 		draw_dragged_piece(renderer, textures, *dragged_piece, mouse_x, mouse_y);
 	}
+
+	// Draw all the piece on the board and present
 	render_grid(renderer, grid, textures);
 	SDL_RenderPresent(renderer);
 	return false;

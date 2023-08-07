@@ -3,16 +3,46 @@
 
 #include <stdbool.h>
 
+#define check_for_check() do {                                   \
+			/* Make a temporary move */                          \
+			Piece temp = grid[end_row][end_col];                 \
+			grid[end_row][end_col] = grid[start_row][start_col]; \
+			grid[start_row][start_col].type = empty;             \
+                                                                 \
+			/* Check if valid */                                 \
+			bool is_valid = is_not_check(grid, piece.color);     \
+                                                                 \
+			/* Reset grid to before temp move */                 \
+			grid[start_row][start_col] = grid[end_row][end_col]; \
+			grid[end_row][end_col] = temp;                       \
+                                                                 \
+			/* Either commit to move or cancel. */               \
+			if(is_valid) {                                       \
+				return true;                                     \
+			}                                                    \
+			return false;                                        \
+} while(false)
+
+enum Color {white, black};
+enum Type {empty, pawn, knight, bishop, rook, queen, king};
+
 typedef struct {
-	enum {empty, pawn, knight, bishop, rook, queen, king} type;
-	enum {black, white} color;
+	enum Type type;
+	enum Color color;
 	bool has_moved; // For pawns, kings, and rooks
+	bool en_passant_available;
 } Piece;
 
-bool process_game_logic(SDL_Renderer* renderer, Textures textures, SDL_Event event, Piece** grid);
+typedef struct {
+	enum Type type;
+	int row;
+	int col;
+	bool is_check;
+} Move;
 
+bool process_game_logic(SDL_Renderer* renderer, Textures textures, Piece** grid);
+bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_row, int start_col, int end_row, int end_col);
 Piece** init_grid();
-
 void destroy_grid(Piece** grid);
 
 #endif
