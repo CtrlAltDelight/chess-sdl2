@@ -173,30 +173,31 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 			// Promotion
 			if(end_row == 7 || end_row == 0) {
 				grid[start_row][start_col].type = queen;
-				check_for_check(true, false);
+				check_for_check(true, false, false);
 			}
-			check_for_check(false, false);
+			check_for_check(false, false, false);
 		}
 		// Two squares forward
 		else if(piece.has_moved == false && end_row == start_row + color_modifier * 2 && end_col == start_col && grid[end_row][end_col].type == empty && grid[start_row + color_modifier][start_col].type == empty) {
-			check_for_check(false, false);
+			check_for_check(false, false, false);
 		}
 		// Capture
 		else if(end_row == start_row + color_modifier * 1 && (end_col == start_col + 1 || end_col == start_col - 1) && (grid[end_row][end_col].type != empty || is_en_passant)) {
 			// en passant
 			if(is_en_passant) {
-				grid[start_row][end_col].type = empty; // delete enemy pawn if en passant
+				check_for_check(false, false, true);
 			}
 			// Promotion
 			else if(end_row == 7 || end_row == 0) {
 				grid[start_row][start_col].type = queen;
+				check_for_check(true, false, false);
 			}
-			check_for_check(true, false);
+			check_for_check(false, false, false);
 		}
 	}
 	else if(piece.type == knight) {
 		if(abs(end_row - start_row) + abs(end_col - start_col) == 3 && start_col != end_col && start_row != end_row) {
-			check_for_check(false, false);
+			check_for_check(false, false, false);
 		}
 	}
 	else if(piece.type == bishop) {
@@ -208,7 +209,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 			}
 		}
 		if(abs(end_row - start_row) == abs(end_col - start_col)) {
-			check_for_check(false, false);
+			check_for_check(false, false, false);
 		}
 	}
 	else if(piece.type == rook) {
@@ -219,7 +220,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 					return false;
 				}
 			}
-			check_for_check(false, false);
+			check_for_check(false, false, false);
 		}
 		else if(start_row != end_row && start_col == end_col) { // vertical movement
 			int step = (end_row > start_row) ? 1 : -1;
@@ -228,7 +229,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 					return false;
 				}
 			}
-			check_for_check(false, false);
+			check_for_check(false, false, false);
 		}
 	}
 	else if(piece.type == queen) {
@@ -240,7 +241,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 	}
 	else if(piece.type == king) {
 		if(abs(end_row - start_row) <= 1 && abs(end_col - start_col) <= 1) {
-			check_for_check(false, false);
+			check_for_check(false, false, false);
 		}
 		// castling
 		else if(abs(end_col - start_col) == 2 && piece.has_moved == false) {
@@ -253,7 +254,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 			bool is_left_rook_available  = grid[start_row][0].type == rook && grid[start_row][0].has_moved == false;
 			bool is_right_rook_available = grid[start_row][7].type == rook && grid[start_row][7].has_moved == false;
 			if((step == 1 && is_right_rook_available) || (step == -1 && is_left_rook_available)) {
-				check_for_check(false, true);
+				check_for_check(false, true, false);
 			}
 		}
 		return false;

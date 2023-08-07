@@ -3,7 +3,7 @@
 
 #include <stdbool.h>
 
-#define check_for_check(is_promoting, is_castling) do {                                                     \
+#define check_for_check(is_promoting, is_castling, is_en_passant) do {                                                     \
 	/* Make a temporary move */                                                                             \
 	Piece temp = grid[end_row][end_col];                                                                    \
 	if(is_promoting) {                                                                                      \
@@ -20,6 +20,9 @@
 		}                                                                                                   \
 		grid[end_row][end_col] = grid[start_row][start_col];                                                \
 	}                                                                                                       \
+	else if(is_en_passant) {\
+				grid[start_row][end_col].type = empty; /* delete enemy pawn if en passant */\
+	}\
 	else {                                                                                                  \
 		grid[end_row][end_col] = grid[start_row][start_col];                                                \
 	}                                                                                                       \
@@ -38,6 +41,10 @@
 	else if(!(is_valid) && is_castling) {                                                                   \
 		grid[end_row][start_col + end_col - start_col] = (Piece) { .type = empty };                         \
 	}                                                                                                       \
+	else if(!(is_valid) && is_en_passant) {\
+				grid[start_row][end_col].type = pawn; /* delete enemy pawn if en passant */\
+				grid[start_row][start_col].type = pawn; /* delete enemy pawn if en passant */\
+	}\
 	else {                                                                                                  \
 		grid[start_row][start_col] = grid[end_row][end_col];                                                \
 	}                                                                                                       \
