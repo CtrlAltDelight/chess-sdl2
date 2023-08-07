@@ -141,6 +141,9 @@ static bool is_not_check(Piece** grid, enum Color turn) {
 	for(int i = 0; i < 8; i++) {
 		for(int j = 0; j < 8; j++) {
 			Piece curr_piece = grid[i][j];
+			if(curr_piece.color == turn) {
+				continue;
+			}
 			is_check = check_valid_move(grid, curr_piece, (Move) {.type = rook}, i, j, king_row, king_col); // previous move doesn't matter
 			if(is_check) {
 				break;
@@ -170,12 +173,13 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 			// Promotion
 			if(end_row == 7 || end_row == 0) {
 				grid[start_row][start_col].type = queen;
+				check_for_check(true, false);
 			}
-			check_for_check();
+			check_for_check(false, false);
 		}
 		// Two squares forward
 		else if(piece.has_moved == false && end_row == start_row + color_modifier * 2 && end_col == start_col && grid[end_row][end_col].type == empty && grid[start_row + color_modifier][start_col].type == empty) {
-			check_for_check();
+			check_for_check(false, false);
 		}
 		// Capture
 		else if(end_row == start_row + color_modifier * 1 && (end_col == start_col + 1 || end_col == start_col - 1) && (grid[end_row][end_col].type != empty || is_en_passant)) {
@@ -187,12 +191,12 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 			else if(end_row == 7 || end_row == 0) {
 				grid[start_row][start_col].type = queen;
 			}
-			check_for_check();
+			check_for_check(true, false);
 		}
 	}
 	else if(piece.type == knight) {
 		if(abs(end_row - start_row) + abs(end_col - start_col) == 3 && start_col != end_col && start_row != end_row) {
-			check_for_check();
+			check_for_check(false, false);
 		}
 	}
 	else if(piece.type == bishop) {
@@ -204,7 +208,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 			}
 		}
 		if(abs(end_row - start_row) == abs(end_col - start_col)) {
-			return is_not_check(grid, piece.color);
+			check_for_check(false, false);
 		}
 	}
 	else if(piece.type == rook) {
@@ -215,7 +219,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 					return false;
 				}
 			}
-			check_for_check();
+			check_for_check(false, false);
 		}
 		else if(start_row != end_row && start_col == end_col) { // vertical movement
 			int step = (end_row > start_row) ? 1 : -1;
@@ -224,7 +228,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 					return false;
 				}
 			}
-			check_for_check();
+			check_for_check(false, false);
 		}
 	}
 	else if(piece.type == queen) {
@@ -236,8 +240,23 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 	}
 	else if(piece.type == king) {
 		if(abs(end_row - start_row) <= 1 && abs(end_col - start_col) <= 1) {
-			check_for_check();
+			check_for_check(false, false);
 		}
+		// castling
+		else if(abs(end_col - start_col) == 2 && piece.has_moved == false) {
+			int step = (end_col > start_col) ? 1 : -1;
+			for(int curr_col = start_col + step; 0 < curr_col && curr_col < 7; curr_col += step) {
+				if(grid[start_row][curr_col].type != empty) {
+					return false;
+				}
+			}
+			bool is_left_rook_available  = grid[start_row][0].type == rook && grid[start_row][0].has_moved == false;
+			bool is_right_rook_available = grid[start_row][7].type == rook && grid[start_row][7].has_moved == false;
+			if((step == 1 && is_right_rook_available) || (step == -1 && is_left_rook_available)) {
+				check_for_check(false, true);
+			}
+		}
+		return false;
 	}
 	return false;
 }
@@ -331,13 +350,13 @@ bool process_game_logic(SDL_Renderer* renderer, Textures textures, Piece** grid)
 		}
 	}
 
+	render_grid(renderer, grid, textures); // Draw all the piece on the board
+
 	// Draw dragged piece if needed
 	if(dragging && dragged_piece != NULL) {
 		draw_dragged_piece(renderer, textures, *dragged_piece, mouse_x, mouse_y);
 	}
-
-	// Draw all the piece on the board and present
-	render_grid(renderer, grid, textures);
+	
 	SDL_RenderPresent(renderer);
 	return false;
 }

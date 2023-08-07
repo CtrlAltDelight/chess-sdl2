@@ -3,38 +3,51 @@
 
 #include <stdbool.h>
 
-#define check_for_check() do {                                                \
-	/* Make a temporary move */                                               \
-	Piece temp = grid[end_row][end_col];                                      \
-	bool is_promoting = piece.type == pawn && (end_row == 7 || end_row == 0); \
-	if(is_promoting) {                                                        \
-		grid[end_row][end_col].type = queen;                                  \
-	}                                                                         \
-	else {                                                                    \
-		grid[end_row][end_col] = grid[start_row][start_col];                  \
-	}                                                                         \
-	grid[start_row][start_col].type = empty;                                  \
-                                                                              \
-	/* Check if valid */                                                      \
-	bool is_valid = is_not_check(grid, piece.color);                          \
-                                                                              \
-	/* Reset grid to before temp move */                                      \
-	if(!is_valid && is_promoting) {                                           \
-		grid[start_row][start_col].type = pawn;                               \
-	}                                                                         \
-	else if(is_valid && is_promoting) {                                       \
-		grid[start_row][start_col].type = queen;                              \
-	}                                                                         \
-	else {                                                                    \
-		grid[start_row][start_col] = grid[end_row][end_col];                  \
-	}                                                                         \
-	grid[end_row][end_col] = temp;                                            \
-                                                                              \
-	/* Either commit to move or cancel. */                                    \
-	if(is_valid) {                                                            \
-		return true;                                                          \
-	}                                                                         \
-	return false;                                                             \
+#define check_for_check(is_promoting, is_castling) do {                                                     \
+	/* Make a temporary move */                                                                             \
+	Piece temp = grid[end_row][end_col];                                                                    \
+	if(is_promoting) {                                                                                      \
+		grid[end_row][end_col].type = queen;                                                                \
+	}                                                                                                       \
+	else if(is_castling) {                                                                                  \
+		int mod = (end_col - start_col > 0) ? 1 : -1;                                                       \
+		grid[end_row][start_col + mod] = (Piece) { .type = rook, .color = piece.color, .has_moved = true }; \
+		if(mod == 1) {                                                                                      \
+			grid[end_row][7].type = empty;                                                                  \
+		}                                                                                                   \
+		else {                                                                                              \
+			grid[end_row][0].type = empty;                                                                  \
+		}                                                                                                   \
+		grid[end_row][end_col] = grid[start_row][start_col];                                                \
+	}                                                                                                       \
+	else {                                                                                                  \
+		grid[end_row][end_col] = grid[start_row][start_col];                                                \
+	}                                                                                                       \
+	grid[start_row][start_col].type = empty;                                                                \
+                                                                                                            \
+	/* Check if valid */                                                                                    \
+	bool is_valid = is_not_check(grid, piece.color);                                                        \
+                                                                                                            \
+	/* Reset grid to before temp move */                                                                    \
+	if(!(is_valid) && is_promoting) {                                                                       \
+		grid[start_row][start_col].type = pawn;                                                             \
+	}                                                                                                       \
+	else if((is_valid) && is_promoting) {                                                                   \
+		grid[start_row][start_col].type = queen;                                                            \
+	}                                                                                                       \
+	else if(!(is_valid) && is_castling) {                                                                   \
+		grid[end_row][start_col + end_col - start_col] = (Piece) { .type = empty };                         \
+	}                                                                                                       \
+	else {                                                                                                  \
+		grid[start_row][start_col] = grid[end_row][end_col];                                                \
+	}                                                                                                       \
+	grid[end_row][end_col] = temp;                                                                          \
+                                                                                                            \
+	/* Either commit to move or cancel. */                                                                  \
+	if(is_valid) {                                                                                          \
+		return true;                                                                                        \
+	}                                                                                                       \
+	return false;                                                                                           \
 } while(false)
 
 enum Color {white, black};
