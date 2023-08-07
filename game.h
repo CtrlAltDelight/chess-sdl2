@@ -35,6 +35,7 @@ typedef struct {
 
 typedef struct {
 	enum Type type;
+	enum Color color;
 	int row;
 	int col;
 	bool is_check;

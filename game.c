@@ -96,8 +96,8 @@ static void move_piece(Piece** grid, enum Color* a_turn, Move* a_previous_move, 
 	grid[row][col].has_moved = true;
 
 	// Update turn and previous move
+	*a_previous_move = (Move) { .type = grid[row][col].type, .color = *a_turn, .row = row, .col = col, .is_check = false };
 	*a_turn = (*a_turn == white) ? black : white;
-	*a_previous_move = (Move) { .type = grid[row][col].type, .row = row, .col = col, .is_check = false }; // TODO check for check
 }
 
 static void draw_dragged_piece(SDL_Renderer* renderer, Textures textures, Piece dragged_piece, int x, int y) {
@@ -163,7 +163,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 	if(piece.type == pawn) {
 		// Color matters
 		int color_modifier = (piece.color == white) ? 1 : -1;
-		bool is_en_passant = previous_move.type == pawn && abs(previous_move.col - start_col) == 1 && ((previous_move.row == 3 && piece.color == black) || (previous_move.row == 4 && piece.color == white));
+		bool is_en_passant = previous_move.col == end_col && previous_move.type == pawn && abs(previous_move.col - start_col) == 1 && ((end_row == 2 && previous_move.row == 3 && piece.color == black) || (end_row == 5 && previous_move.row == 4 && piece.color == white));
 
 		// One square forward
 		if(end_row == start_row + color_modifier * 1 && end_col == start_col && grid[end_row][end_col].type == empty) {
@@ -182,7 +182,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 		}
 	}
 	else if(piece.type == knight) {
-		if(abs(end_row - start_row) + abs(end_col - start_col) == 3) {
+		if(abs(end_row - start_row) + abs(end_col - start_col) == 3 && start_col != end_col && start_row != end_row) {
 			check_for_check();
 		}
 	}
