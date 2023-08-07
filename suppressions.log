@@ -1,0 +1,4824 @@
+{
+   <insert_a_suppression_name_here>
+   Memcheck:ReallocZero
+   fun:realloc
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:_XlcDefaultMapModifiers
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:_XlcResolveLocaleName
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:iconv_simple
+   fun:pa_log_set_ident
+   fun:init_defaults.part.0
+   fun:UnknownInlinedFun
+   fun:pa_log_levelv_meta
+   fun:pa_log_level_meta
+   fun:pa_config_parse
+   fun:pa_client_conf_load
+   fun:pa_context_new_with_proplist
+   fun:ConnectToPulseServer_Internal
+   fun:UnknownInlinedFun
+   fun:PULSEAUDIO_Init.lto_priv.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_strdup
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:_dbus_data_slot_allocator_alloc.part.0
+   fun:ensure_bus_data
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:_XimOpenIM
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_string_init_preallocated
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_string_init_preallocated
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_string_init_preallocated
+   fun:_dbus_auth_new.constprop.0
+   fun:_dbus_auth_client_new
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_string_init_preallocated
+   fun:_dbus_auth_new.constprop.0
+   fun:_dbus_auth_client_new
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcAddLoader
+   fun:_XlcInitLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcAddLoader
+   fun:_XlcInitLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcAddLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:add_codeset
+   fun:load_generic
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:malloc
+   fun:decompose_rpath
+   fun:_dl_map_object
+   fun:openaux
+   fun:_dl_catch_exception
+   fun:_dl_map_object_deps
+   fun:dl_open_worker_begin
+   fun:_dl_catch_exception
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   fun:dlopen_doit
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_queue_push
+   fun:pa_pstream_send_packet
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_creds
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+   fun:ConnectToPulseServer_Internal
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_queue_push
+   fun:pa_pstream_send_packet
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:_dbus_data_slot_list_set.isra.0
+   fun:UnknownInlinedFun
+   fun:dbus_connection_set_data
+   fun:ensure_bus_data
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:load_generic
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:dbus_threads_init
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_register_shutdown_func
+   fun:UnknownInlinedFun
+   fun:internal_bus_get
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_register_shutdown_func
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:dbus_message_unref
+   fun:_dbus_pending_call_last_unref
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:create.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:create.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:_XlcResolveLocaleName
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_register_shutdown_func
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:ensure_bus_data
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_strdup
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:internal_bus_get
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_strdup
+   fun:UnknownInlinedFun
+   fun:internal_bus_get
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_lengthen
+   fun:UnknownInlinedFun
+   fun:_dbus_string_append
+   fun:_dbus_auth_new.constprop.0
+   fun:_dbus_auth_client_new
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_aupdate_new
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:pa_memtrap_add
+   fun:segment_attach
+   fun:pa_memimport_attach_memfd
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_semaphore_new
+   fun:pa_aupdate_new
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:pa_memtrap_add
+   fun:segment_attach
+   fun:pa_memimport_attach_memfd
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:malloc
+   fun:allocate_dtv_entry
+   fun:allocate_and_init
+   fun:tls_get_addr_tail
+   fun:__tls_get_addr
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:*
+   fun:call_init
+   fun:call_init
+   fun:_dl_init
+   fun:_dl_catch_exception
+   fun:dl_open_worker
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:set_length
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_copy
+   fun:send_auth
+   fun:_dbus_auth_client_new
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_strdup
+   fun:UnknownInlinedFun
+   fun:internal_bus_get
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_string_copy_data
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_mem_pool_new
+   fun:alloc_link
+   fun:_dbus_list_prepend
+   fun:_dbus_list_append
+   fun:dbus_parse_address
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:pa_init_i18n
+   fun:pa_mainloop_new
+   fun:ConnectToPulseServer_Internal
+   fun:UnknownInlinedFun
+   fun:PULSEAUDIO_Init.lto_priv.0
+   fun:SDL_AudioInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:UnknownInlinedFun
+   fun:pa_log_levelv_meta
+   fun:pa_log_level_meta
+   fun:pa_config_parse
+   fun:pa_client_conf_load
+   fun:pa_context_new_with_proplist
+   fun:ConnectToPulseServer_Internal
+   fun:UnknownInlinedFun
+   fun:PULSEAUDIO_Init.lto_priv.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:pa_page_size
+   fun:pa_mempool_new
+   fun:pa_context_new_with_proplist
+   fun:ConnectToPulseServer_Internal
+   fun:UnknownInlinedFun
+   fun:PULSEAUDIO_Init.lto_priv.0
+   fun:SDL_AudioInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_tagstruct_new
+   fun:pa_tagstruct_command
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_packet_new
+   fun:pa_packet_new_data
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_creds
+   fun:setup_context
+   fun:on_connection
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_pstream_send_packet
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_creds
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_queue_push
+   fun:pa_pstream_send_packet
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_creds
+   fun:setup_context
+   fun:on_connection
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_pdispatch_register_reply
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:UnknownInlinedFun
+   fun:pa_memtrap_add
+   fun:segment_attach
+   fun:pa_memimport_attach_memfd
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_aupdate_new
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:pa_memtrap_add
+   fun:segment_attach
+   fun:pa_memimport_attach_memfd
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_memtrap_add
+   fun:segment_attach
+   fun:pa_memimport_attach_memfd
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:segment_attach
+   fun:pa_memimport_attach_memfd
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_idxset_put
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_memimport_get
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+   fun:ConnectToPulseServer_Internal
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_mutex_new
+   fun:pa_static_mutex_get
+   fun:pa_once_begin
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_operation_new
+   fun:pa_context_send_simple_command
+   fun:PULSEAUDIO_DetectDevices
+   fun:SDL_AudioInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_mem_pool_new
+   fun:_dbus_hash_table_new
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_platform_rmutex_new
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_counter_new
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_mem_pool_new
+   fun:_dbus_hash_table_new
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_platform_rmutex_new
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_cmutex_new_at_location
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_cmutex_new_at_location
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_platform_rmutex_new
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_platform_rmutex_new
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_counter_new
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:malloc
+   fun:open_path
+   fun:_dl_map_object
+   fun:openaux
+   fun:_dl_catch_exception
+   fun:_dl_map_object_deps
+   fun:dl_open_worker_begin
+   fun:_dl_catch_exception
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   fun:dlopen_doit
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:pa_xmemdup
+   fun:pa_flist_new_with_name
+   fun:items_flist_init
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_pstream_send_packet
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_creds
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:pa_xmemdup
+   fun:pa_flist_new_with_name
+   fun:entries_flist_init
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_queue_push
+   fun:pa_pstream_send_packet
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_creds
+   fun:setup_context
+   fun:on_connection
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:pa_xmemdup
+   fun:pa_flist_new_with_name
+   fun:packets_flist_init
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_packet_new
+   fun:pa_packet_new_data
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_creds
+   fun:setup_context
+   fun:on_connection
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:pa_xmemdup
+   fun:pa_flist_new_with_name
+   fun:entries_flist_init.lto_priv.1
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_idxset_put
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:pa_xmemdup
+   fun:pa_flist_new_with_name
+   fun:entries_flist_init.lto_priv.0
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:segment_attach
+   fun:pa_memimport_attach_memfd
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcAddCT
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:segment_attach
+   fun:pa_memimport_attach_memfd
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:pa_proplist_sets
+   fun:pa_init_proplist
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:pa_proplist_sets
+   fun:pa_init_proplist
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:pa_proplist_sets
+   fun:pa_init_proplist
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:pa_proplist_sets
+   fun:pa_init_proplist
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:pa_proplist_sets
+   fun:pa_init_proplist
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:pa_proplist_sets
+   fun:pa_init_proplist
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:pa_proplist_sets
+   fun:pa_init_proplist
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:pa_proplist_sets
+   fun:pa_init_proplist
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:pa_proplist_sets
+   fun:pa_init_proplist
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:pa_memimport_get
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+   fun:ConnectToPulseServer_Internal
+   fun:UnknownInlinedFun
+   fun:PULSEAUDIO_Init.lto_priv.0
+   fun:SDL_AudioInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:pa_xmemdup
+   fun:pa_flist_new_with_name
+   fun:operations_flist_init
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_operation_new
+   fun:pa_context_send_simple_command
+   fun:PULSEAUDIO_DetectDevices
+   fun:SDL_AudioInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:pa_proplist_set
+   fun:pa_tagstruct_get_proplist
+   fun:context_get_source_info_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:srb_callback
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_condvar_new_at_location
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_condvar_new_at_location
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:pa_xmemdup
+   fun:pa_flist_new_with_name
+   fun:tagstructs_flist_init
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_tagstruct_new
+   fun:pa_tagstruct_command
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:pa_xmemdup
+   fun:pa_flist_new_with_name
+   fun:reply_infos_flist_init
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_pdispatch_register_reply
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:pa_xmemdup
+   fun:pa_flist_new_with_name
+   fun:unused_memblocks_flist_init.lto_priv.0
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_memimport_get
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+   fun:ConnectToPulseServer_Internal
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcCreateDefaultCharSet
+   fun:load_generic
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:set_length
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_copy
+   fun:UnknownInlinedFun
+   fun:handle_client_state_waiting_for_data
+   fun:UnknownInlinedFun
+   fun:_dbus_auth_do_work
+   fun:_dbus_transport_try_to_authenticate
+   fun:do_authentication
+   fun:socket_do_iteration
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_do_iteration_unlocked
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:dbus_pending_call_block
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:_XrmInternalStringToQuark
+   fun:_XlcGetCharSet
+   fun:_XlcAddCT
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8LocaleConverters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcAddUtf8Converters
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcSetConverter
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_pdispatch_register_reply
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+   fun:ConnectToPulseServer_Internal
+   fun:UnknownInlinedFun
+   fun:PULSEAUDIO_Init.lto_priv.0
+   fun:SDL_AudioInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_idxset_put
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_memimport_get
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+   fun:ConnectToPulseServer_Internal
+   fun:UnknownInlinedFun
+   fun:PULSEAUDIO_Init.lto_priv.0
+   fun:SDL_AudioInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:malloc
+   fun:resize_scopes
+   fun:dl_open_worker_begin
+   fun:_dl_catch_exception
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen_implementation
+   fun:dlopen@@GLIBC_2.34
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_watch_new
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_watch_new
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:UnknownInlinedFun
+   fun:_dbus_object_subtree_new.constprop.0
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:_dbus_message_loader_get_unix_fds
+   fun:do_reading
+   fun:socket_do_iteration
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_do_iteration_unlocked
+   fun:UnknownInlinedFun
+   fun:dbus_pending_call_block
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:malloc
+   fun:_dl_close_worker
+   fun:_dl_close
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlclose@@GLIBC_2.34
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:SDL_UDEV_Quit
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:SDL_QuitSubSystem_REAL
+   fun:SDL_Quit_REAL
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcAddCharSet
+   fun:load_generic
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:SDL_strdup_REAL
+   fun:SDL_IBus_Init
+   fun:SDL_IME_Init.isra.0
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_credentials_new
+   fun:_dbus_auth_new.constprop.0
+   fun:_dbus_auth_client_new
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_credentials_new
+   fun:_dbus_auth_new.constprop.0
+   fun:_dbus_auth_client_new
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_credentials_new
+   fun:_dbus_auth_new.constprop.0
+   fun:_dbus_auth_client_new
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_credentials_new
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcCreateDefaultCharSet
+   fun:load_generic
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:load_generic
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_operation_new
+   fun:pa_context_send_simple_command
+   fun:PULSEAUDIO_DetectDevices
+   fun:SDL_AudioInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_counter_new
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_counter_new
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:set_length
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_copy_len
+   fun:_dbus_header_load.constprop.0
+   fun:UnknownInlinedFun
+   fun:_dbus_message_loader_queue_messages
+   fun:_dbus_transport_get_dispatch_status
+   fun:_dbus_transport_queue_messages
+   fun:do_reading
+   fun:socket_do_iteration
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_do_iteration_unlocked
+   fun:UnknownInlinedFun
+   fun:dbus_pending_call_block
+   fun:dbus_connection_send_with_reply_and_block
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_pstream_send_packet
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_creds
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+   fun:ConnectToPulseServer_Internal
+   fun:UnknownInlinedFun
+   fun:PULSEAUDIO_Init.lto_priv.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_pstream_send_packet
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_message_loader_new
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:segment_attach
+   fun:pa_memimport_attach_memfd
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_common_command_register_memfd_shmid
+   fun:pa_command_register_memfd_shmid
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:append_value_list
+   fun:store_to_database
+   fun:f_newline.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:load_generic
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_hash_table_new
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_hash_table_new
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_string_init_preallocated
+   fun:dbus_message_new_empty_header
+   fun:_dbus_message_loader_queue_messages
+   fun:_dbus_transport_get_dispatch_status
+   fun:_dbus_transport_queue_messages
+   fun:do_reading
+   fun:socket_do_iteration
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_do_iteration_unlocked
+   fun:UnknownInlinedFun
+   fun:dbus_pending_call_block
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:add_codeset
+   fun:load_generic
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_idxset_put
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_common_command_register_memfd_shmid
+   fun:pa_command_register_memfd_shmid
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:append_value_list
+   fun:store_to_database
+   fun:f_newline.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_packet_new
+   fun:pa_packet_new_data
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_creds
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+   fun:ConnectToPulseServer_Internal
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_packet_new
+   fun:pa_packet_new_data
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_fds
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_packet_new
+   fun:pa_packet_new_data
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_lengthen
+   fun:UnknownInlinedFun
+   fun:writer_recurse_struct_or_dict_entry.isra.0
+   fun:_dbus_type_writer_recurse
+   fun:write_basic_field.lto_priv.0
+   fun:_dbus_header_set_field_basic
+   fun:dbus_message_set_reply_serial
+   fun:dbus_message_new_error
+   fun:UnknownInlinedFun
+   fun:dbus_connection_send_with_reply
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+   fun:internal_bus_get
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:add_codeset
+   fun:load_generic
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:create.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:create.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_tagstruct_new
+   fun:pa_tagstruct_command
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+   fun:ConnectToPulseServer_Internal
+   fun:UnknownInlinedFun
+   fun:PULSEAUDIO_Init.lto_priv.0
+   fun:SDL_AudioInit_REAL
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_tagstruct_new
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:create.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:create.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:append_value_list
+   fun:store_to_database
+   fun:f_newline.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:dbus_message_new_empty_header
+   fun:dbus_message_new_method_call
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:dbus_message_new_empty_header
+   fun:dbus_message_new_error
+   fun:UnknownInlinedFun
+   fun:dbus_connection_send_with_reply
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:calloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:calloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:store_to_database
+   fun:f_newline.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:set_length
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_copy_len
+   fun:marshal_len_followed_by_bytes.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_type_writer_write_basic
+   fun:dbus_message_iter_append_basic
+   fun:dbus_message_new_error
+   fun:UnknownInlinedFun
+   fun:dbus_connection_send_with_reply
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:set_length
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_copy_len
+   fun:marshal_len_followed_by_bytes.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_type_writer_write_basic
+   fun:dbus_message_iter_append_basic
+   fun:dbus_message_new_error
+   fun:UnknownInlinedFun
+   fun:dbus_connection_send_with_reply
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:set_length
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_copy_len
+   fun:marshal_len_followed_by_bytes.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_type_writer_write_basic
+   fun:dbus_message_iter_append_basic
+   fun:dbus_message_new_error
+   fun:UnknownInlinedFun
+   fun:dbus_connection_send_with_reply
+   fun:dbus_connection_send_with_reply_and_block
+   fun:SDL_DBus_CallMethodInternal
+   fun:SDL_DBus_CallMethod
+   fun:SDL_DBus_ScreensaverInhibit
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:set_length
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_copy_len
+   fun:marshal_len_followed_by_bytes.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_type_writer_write_basic
+   fun:dbus_message_iter_append_basic
+   fun:dbus_message_new_error
+   fun:UnknownInlinedFun
+   fun:dbus_connection_send_with_reply
+   fun:dbus_connection_send_with_reply_and_block
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:malloc
+   fun:strdup
+   fun:_dl_load_cache_lookup
+   fun:_dl_map_object
+   fun:dl_open_worker_begin
+   fun:_dl_catch_exception
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:malloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:dl_open_worker_begin
+   fun:_dl_catch_exception
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_auth_new.constprop.0
+   fun:_dbus_auth_client_new
+   fun:UnknownInlinedFun
+   fun:_dbus_transport_new_for_socket
+   fun:_dbus_transport_new_for_domain_socket
+   fun:_dbus_transport_open_platform_specific
+   fun:_dbus_transport_open
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_dbus_connection_new_for_transport
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:store_to_database
+   fun:f_newline.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_XlcCreateDefaultCharSet
+   fun:load_generic
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:append_value_list
+   fun:store_to_database
+   fun:f_newline.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:malloc
+   fun:add_to_global_resize
+   fun:dl_open_worker_begin
+   fun:_dl_catch_exception
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen_implementation
+   fun:dlopen@@GLIBC_2.34
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_lengthen
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_type_writer_recurse_contained_len.lto_priv.0
+   fun:_dbus_type_writer_recurse
+   fun:write_basic_field.lto_priv.0
+   fun:_dbus_header_create.constprop.0
+   fun:dbus_message_new_method_call
+   fun:SDL_DBus_CallVoidMethodInternal
+   fun:SDL_DBus_CallVoidMethod
+   fun:X11_SuspendScreenSaver
+   fun:UnknownInlinedFun
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_lengthen
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_type_writer_recurse_contained_len.lto_priv.0
+   fun:_dbus_type_writer_recurse
+   fun:write_basic_field.lto_priv.0
+   fun:_dbus_header_set_field_basic
+   fun:UnknownInlinedFun
+   fun:_dbus_message_iter_close_signature
+   fun:dbus_message_iter_append_basic
+   fun:dbus_message_append_args_valist
+   fun:SDL_DBus_CallMethodInternal
+   fun:SDL_DBus_CallMethod
+   fun:SDL_DBus_ScreensaverInhibit
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:set_length
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_copy_len
+   fun:marshal_len_followed_by_bytes.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_type_writer_write_basic
+   fun:write_basic_field.lto_priv.0
+   fun:_dbus_header_create.constprop.0
+   fun:dbus_message_new_method_call
+   fun:SDL_DBus_CallVoidMethodInternal
+   fun:SDL_DBus_CallVoidMethod
+   fun:X11_PumpEvents
+   fun:UnknownInlinedFun
+   fun:X11_GL_LoadLibrary.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:UnknownInlinedFun
+   fun:_dbus_mem_pool_alloc
+   fun:alloc_link
+   fun:_dbus_list_prepend
+   fun:_dbus_list_append
+   fun:dbus_parse_address
+   fun:_dbus_connection_open_internal
+   fun:internal_bus_get
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:UnknownInlinedFun
+   fun:_dbus_mem_pool_alloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:find_generic_function
+   fun:find_direct_function.lto_priv.0
+   fun:_dbus_hash_table_insert_int
+   fun:UnknownInlinedFun
+   fun:dbus_connection_send_with_reply
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:set_length
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_copy_len
+   fun:_dbus_header_load.constprop.0
+   fun:UnknownInlinedFun
+   fun:_dbus_message_loader_queue_messages
+   fun:_dbus_transport_get_dispatch_status
+   fun:_dbus_transport_queue_messages
+   fun:do_reading
+   fun:socket_do_iteration
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_do_iteration_unlocked
+   fun:UnknownInlinedFun
+   fun:dbus_pending_call_block
+   fun:dbus_connection_send_with_reply_and_block
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_dbus_platform_rmutex_new
+   fun:UnknownInlinedFun
+   fun:dbus_threads_init
+   fun:SDL_DBus_Init_Spinlocked.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:calloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:calloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:calloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:set_length
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_copy_len
+   fun:UnknownInlinedFun
+   fun:_dbus_message_loader_queue_messages
+   fun:_dbus_transport_get_dispatch_status
+   fun:_dbus_transport_queue_messages
+   fun:do_reading
+   fun:socket_do_iteration
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_do_iteration_unlocked
+   fun:UnknownInlinedFun
+   fun:dbus_pending_call_block
+   fun:dbus_connection_send_with_reply_and_block
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:malloc
+   fun:_dl_close_worker
+   fun:_dl_close
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlclose@@GLIBC_2.34
+   fun:UnknownInlinedFun
+   fun:SDL_X11_UnloadSymbols.part.0
+   fun:SDL_VideoQuit_REAL.part.0
+   fun:UnknownInlinedFun
+   fun:SDL_QuitSubSystem_REAL
+   fun:SDL_Quit_REAL
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcCreateDefaultCharSet
+   fun:_XlcAddCT
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:malloc
+   fun:strdup
+   fun:_dl_load_cache_lookup
+   fun:_dl_map_object
+   fun:openaux
+   fun:_dl_catch_exception
+   fun:_dl_map_object_deps
+   fun:dl_open_worker_begin
+   fun:_dl_catch_exception
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:malloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:openaux
+   fun:_dl_catch_exception
+   fun:_dl_map_object_deps
+   fun:dl_open_worker_begin
+   fun:_dl_catch_exception
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:store_to_database
+   fun:f_newline.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcDefaultLoader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:calloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:append_value_list
+   fun:store_to_database
+   fun:f_newline.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:UnknownInlinedFun
+   fun:_dbus_mem_pool_alloc
+   fun:alloc_link
+   fun:_dbus_connection_preallocate_send_unlocked
+   fun:UnknownInlinedFun
+   fun:dbus_connection_send_with_reply
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:calloc
+   fun:dbus_message_new_empty_header
+   fun:_dbus_message_loader_queue_messages
+   fun:_dbus_transport_get_dispatch_status
+   fun:_dbus_transport_queue_messages
+   fun:do_reading
+   fun:socket_do_iteration
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_do_iteration_unlocked
+   fun:UnknownInlinedFun
+   fun:dbus_pending_call_block
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+   fun:internal_bus_get
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcAddCharSet
+   fun:_XlcAddCT
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:dbus_message_new_empty_header
+   fun:_dbus_message_loader_queue_messages
+   fun:_dbus_transport_get_dispatch_status
+   fun:_dbus_transport_queue_messages
+   fun:do_reading
+   fun:socket_do_iteration
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_do_iteration_unlocked
+   fun:UnknownInlinedFun
+   fun:dbus_pending_call_block
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+   fun:internal_bus_get
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcCreateDefaultCharSet
+   fun:_XlcAddCT
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:store_to_database
+   fun:f_newline.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:add_codeset
+   fun:load_generic
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:strdup
+   fun:store_to_database
+   fun:f_newline.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:append_value_list
+   fun:store_to_database
+   fun:f_newline.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:pa_xmalloc
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:pa_proplist_set
+   fun:pa_tagstruct_get_proplist
+   fun:context_get_sink_info_callback.lto_priv.0
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:srb_callback
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_lengthen
+   fun:_dbus_read
+   fun:UnknownInlinedFun
+   fun:do_authentication
+   fun:socket_do_iteration
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_do_iteration_unlocked
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:dbus_pending_call_block
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:realloc
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_string_lengthen
+   fun:_dbus_read_socket_with_unix_fds
+   fun:do_reading
+   fun:socket_do_iteration
+   fun:UnknownInlinedFun
+   fun:UnknownInlinedFun
+   fun:_dbus_connection_do_iteration_unlocked
+   fun:UnknownInlinedFun
+   fun:dbus_pending_call_block
+   fun:dbus_connection_send_with_reply_and_block
+   fun:dbus_bus_register
+   fun:internal_bus_get
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:_XlcAddCT
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: indirect
+   fun:malloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:store_to_database
+   fun:f_newline.lto_priv.0
+   fun:UnknownInlinedFun
+   fun:_XlcCreateLocaleDataBase
+   fun:UnknownInlinedFun
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:_XlcCreateDefaultCharSet
+   fun:_XlcAddCT
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:UnknownInlinedFun
+   fun:_XrmInternalStringToQuark
+   fun:_XlcGetCharSet
+   fun:_XlcAddCT
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:pa_xmalloc0
+   fun:pa_flist_new_with_name
+   fun:tagstructs_flist_init
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_tagstruct_new
+   fun:pa_tagstruct_command
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:pa_xmalloc0
+   fun:pa_flist_new_with_name
+   fun:packets_flist_init
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_packet_new
+   fun:pa_packet_new_data
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_creds
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:pa_xmalloc0
+   fun:pa_flist_new_with_name
+   fun:items_flist_init
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_pstream_send_packet
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_creds
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:pa_xmalloc0
+   fun:pa_flist_new_with_name
+   fun:entries_flist_init
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_queue_push
+   fun:pa_pstream_send_packet
+   fun:pa_pstream_send_tagstruct_with_ancil_data
+   fun:pa_pstream_send_tagstruct_with_creds
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:pa_xmalloc0
+   fun:pa_flist_new_with_name
+   fun:reply_infos_flist_init
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_pdispatch_register_reply
+   fun:setup_context
+   fun:on_connection
+   fun:do_call
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+   fun:ConnectToPulseServer_Internal
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:pa_xmalloc0
+   fun:pa_flist_new_with_name
+   fun:entries_flist_init.lto_priv.0
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_hashmap_put
+   fun:segment_attach
+   fun:pa_memimport_attach_memfd
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:pa_xmalloc0
+   fun:pa_flist_new_with_name
+   fun:entries_flist_init.lto_priv.1
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_idxset_put
+   fun:pa_pstream_attach_memfd_shmid
+   fun:pa_pstream_register_memfd_mempool
+   fun:setup_complete_callback
+   fun:run_action
+   fun:pa_pdispatch_run
+   fun:pstream_packet_callback
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:pa_xmalloc0
+   fun:pa_flist_new_with_name
+   fun:unused_memblocks_flist_init.lto_priv.0
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_memimport_get
+   fun:do_read
+   fun:do_pstream_read_write
+   fun:UnknownInlinedFun
+   fun:pa_mainloop_dispatch
+   fun:pa_mainloop_iterate
+   fun:ConnectToPulseServer_Internal
+   fun:UnknownInlinedFun
+   fun:PULSEAUDIO_Init.lto_priv.0
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:pa_xmalloc0
+   fun:pa_flist_new_with_name
+   fun:operations_flist_init
+   fun:pa_run_once
+   fun:UnknownInlinedFun
+   fun:pa_operation_new
+   fun:pa_context_send_simple_command
+   fun:PULSEAUDIO_DetectDevices
+   fun:SDL_AudioInit_REAL
+   fun:SDL_InitSubSystem_REAL.part.0
+   fun:main
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: definite
+   fun:malloc
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glvkspirv.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libnvidia-glcore.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+   obj:/usr/lib/libGLX_nvidia.so.535.86.05
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:_Xpermalloc
+   fun:UnknownInlinedFun
+   fun:_XrmInternalStringToQuark
+   fun:_XlcGetCharSet
+   fun:_XlcAddCT
+   fun:UnknownInlinedFun
+   fun:_XlcInitCTInfo
+   fun:initialize.lto_priv.1
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:malloc
+   fun:UnknownInlinedFun
+   fun:_XrmInternalStringToQuark
+   fun:_XlcGetLocaleDataBase
+   fun:load_generic
+   fun:initialize.lto_priv.0
+   fun:_XlcCreateLC
+   fun:_XlcUtf8Loader
+   fun:_XOpenLC
+   fun:XSetLocaleModifiers
+   fun:X11_InitKeyboard
+   fun:X11_VideoInit.lto_priv.0
+   fun:SDL_VideoInit_REAL
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:calloc
+   fun:_dl_check_map_versions
+   fun:dl_open_worker_begin
+   fun:_dl_catch_exception
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+   fun:_dlerror_run
+   fun:dlopen_implementation
+   fun:dlopen@@GLIBC_2.34
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:calloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:dl_open_worker_begin
+   fun:_dl_catch_exception
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+   fun:dlopen_doit
+   fun:_dl_catch_exception
+   fun:_dl_catch_error
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Leak
+   match-leak-kinds: reachable
+   fun:calloc
+   fun:calloc
+   fun:_dl_new_object
+   fun:_dl_map_object_from_fd
+   fun:_dl_map_object
+   fun:openaux
+   fun:_dl_catch_exception
+   fun:_dl_map_object_deps
+   fun:dl_open_worker_begin
+   fun:_dl_catch_exception
+   fun:dl_open_worker
+   fun:_dl_catch_exception
+   fun:_dl_open
+}
+
