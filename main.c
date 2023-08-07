@@ -7,10 +7,7 @@
 #include <SDL2/SDL_timer.h>
 
 #include "sdl_utils.h"
-
-bool process_game_logic() {
-	return true;
-}
+#include "game.h"
 
 int main(int argc, char* argv[]) {
 	// Initialize SDL
@@ -26,7 +23,6 @@ int main(int argc, char* argv[]) {
 				SDL_WINDOW_SHOWN
 	);
 	check_null(window);
-	SDL_WarpMouseInWindow(window, 0, 0); // Not completely necessary
 
 	// Create renderer
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
@@ -43,20 +39,12 @@ int main(int argc, char* argv[]) {
 
 	// Run game
 	bool is_done = false;
+	SDL_Event event;
+	Piece** grid = init_grid();
 	while(!is_done) {
-		is_done = process_game_logic();
+		is_done = process_game_logic(renderer, textures, event, grid);
 	}
-
-	// Render the texture
-	int y_position = BOARD_LENGTH - BORDER_LENGTH - 2 * GRID_LENGTH;
-	int x_position = BORDER_LENGTH + 1 * GRID_LENGTH;
-	SDL_Rect destination = { .x = x_position, .y = y_position, .w = GRID_LENGTH, .h = GRID_LENGTH };
-	SDL_RenderCopy(renderer, textures.pawn, NULL, &destination);
-
-	SDL_RenderPresent(renderer);
-
-
-	SDL_Delay(2000); // STUB TODO - Remove later
+	destroy_grid(grid);
 
 	// SDL cleanup
 	unload_textures(textures);

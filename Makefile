@@ -1,4 +1,4 @@
-SRC_C:=main.c sdl_utils.c
+SRC_C:=main.c sdl_utils.c game.c
 OBJS:=$(SRC_C:.c=.o)
 CFLAGS:=-std=c11 -pedantic -Wvla -Wall -Wshadow -g
 SHELL:=/bin/bash
@@ -21,4 +21,4 @@ clean:
 all: $(EXECUTABLE)
 
 valgrind: $(EXECUTABLE)
-	valgrind --gen-suppressions=all --suppressions=./valgrind.sup --leak-check=full --show-leak-kinds=all ./$(EXECUTABLE)
+	valgrind --suppressions=./valgrind.sup ./$(EXECUTABLE)
