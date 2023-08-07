@@ -167,6 +167,10 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 
 		// One square forward
 		if(end_row == start_row + color_modifier * 1 && end_col == start_col && grid[end_row][end_col].type == empty) {
+			// Promotion
+			if(end_row == 7 || end_row == 0) {
+				grid[start_row][start_col].type = queen;
+			}
 			check_for_check();
 		}
 		// Two squares forward
@@ -175,8 +179,13 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 		}
 		// Capture
 		else if(end_row == start_row + color_modifier * 1 && (end_col == start_col + 1 || end_col == start_col - 1) && (grid[end_row][end_col].type != empty || is_en_passant)) {
+			// en passant
 			if(is_en_passant) {
 				grid[start_row][end_col].type = empty; // delete enemy pawn if en passant
+			}
+			// Promotion
+			else if(end_row == 7 || end_row == 0) {
+				grid[start_row][start_col].type = queen;
 			}
 			check_for_check();
 		}
@@ -190,7 +199,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 		for(int i = 1; i < abs(end_row - start_row); i++) {
 			int row_offset = (end_row > start_row) ? i : -i;
 			int col_offset = (end_col > start_col) ? i : -i;
-			if(grid[start_row + row_offset][start_col + col_offset].type != empty) {
+			if(start_row + row_offset <= 7 && start_col + col_offset <= 7 && grid[start_row + row_offset][start_col + col_offset].type != empty) {
 				return false;
 			}
 		}
