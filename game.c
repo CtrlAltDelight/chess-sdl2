@@ -94,13 +94,18 @@ static void render_grid(SDL_Renderer* renderer, Piece** grid, Textures textures)
 }
 
 static void move_piece(Piece** grid, int orig_row, int orig_col, int row, int col) {
+	// Do nothing if there is no move
+	if(orig_row == row && orig_col == col) {
+		return;
+	}
+
 	grid[row][col] = grid[orig_row][orig_col];
 	grid[orig_row][orig_col] = (Piece) { .type = empty };
 }
 
 static void draw_dragged_piece(SDL_Renderer* renderer, Textures textures, Piece dragged_piece, int x, int y) {
 	SDL_Texture* texture = get_texture_for_piece(dragged_piece, textures);
-	SDL_Rect destination = { .x = x, .y = y, .w = GRID_LENGTH, .h = GRID_LENGTH };
+	SDL_Rect destination = { .x = x - (GRID_LENGTH / 4), .y = y - (GRID_LENGTH / 4), .w = GRID_LENGTH / 2, .h = GRID_LENGTH / 2};
 	SDL_RenderCopy(renderer, texture, NULL, &destination);
 }
 
@@ -112,6 +117,9 @@ bool process_game_logic(SDL_Renderer* renderer, Textures textures, SDL_Event eve
 	static Piece* dragged_piece = NULL;
 	static int mouse_x = 0;
 	static int mouse_y = 0;
+
+	// Clear and draw board
+	SDL_RenderClear(renderer);
 	SDL_RenderCopy(renderer, textures.board, NULL, NULL);
 
 	while (SDL_PollEvent(&event) != 0) {
