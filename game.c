@@ -175,36 +175,44 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 				grid[start_row][start_col].type = queen;
 				check_for_check(true, false, false);
 			}
+
 			check_for_check(false, false, false);
 		}
+		
 		// Two squares forward
 		else if(piece.has_moved == false && end_row == start_row + color_modifier * 2 && end_col == start_col && grid[end_row][end_col].type == empty && grid[start_row + color_modifier][start_col].type == empty) {
 			check_for_check(false, false, false);
 		}
+
 		// Capture
 		else if(end_row == start_row + color_modifier * 1 && (end_col == start_col + 1 || end_col == start_col - 1) && (grid[end_row][end_col].type != empty || is_en_passant)) {
 			// en passant
 			if(is_en_passant) {
 				check_for_check(false, false, true);
 			}
+
 			// Promotion
 			else if(end_row == 7 || end_row == 0) {
-				grid[start_row][start_col].type = queen;
+				//grid[start_row][start_col].type = queen;
 				check_for_check(true, false, false);
 			}
+
 			check_for_check(false, false, false);
 		}
 	}
+
 	else if(piece.type == knight) {
 		if(abs(end_row - start_row) + abs(end_col - start_col) == 3 && start_col != end_col && start_row != end_row) {
 			check_for_check(false, false, false);
 		}
 	}
+
 	else if(piece.type == bishop) {
 		for(int i = 1; i < abs(end_row - start_row); i++) {
 			int row_offset = (end_row > start_row) ? i : -i;
 			int col_offset = (end_col > start_col) ? i : -i;
-			if(start_row + row_offset <= 7 && start_col + col_offset <= 7 && grid[start_row + row_offset][start_col + col_offset].type != empty) {
+			if(start_row + row_offset <= 7 && start_col + col_offset <= 7  &&
+			   start_row + row_offset >= 0 && start_col + col_offset >= 0 && grid[start_row + row_offset][start_col + col_offset].type != empty) {
 				return false;
 			}
 		}
@@ -212,6 +220,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 			check_for_check(false, false, false);
 		}
 	}
+
 	else if(piece.type == rook) {
 		if(start_row == end_row && start_col != end_col) { // horizontal movement
 			int step = (end_col > start_col) ? 1 : -1;
@@ -232,6 +241,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 			check_for_check(false, false, false);
 		}
 	}
+
 	else if(piece.type == queen) {
 		Piece as_bishop = { .type = bishop, .color = piece.color, .has_moved = piece.has_moved };
 		Piece as_rook   = { .type = rook,   .color = piece.color, .has_moved = piece.has_moved };
@@ -239,6 +249,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 		return check_valid_move(grid, as_bishop, previous_move, start_row, start_col, end_row, end_col) ||
 			   check_valid_move(grid, as_rook,   previous_move, start_row, start_col, end_row, end_col);
 	}
+
 	else if(piece.type == king) {
 		if(abs(end_row - start_row) <= 1 && abs(end_col - start_col) <= 1) {
 			check_for_check(false, false, false);
@@ -259,6 +270,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 		}
 		return false;
 	}
+
 	return false;
 }
 

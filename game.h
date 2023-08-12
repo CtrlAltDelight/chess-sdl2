@@ -21,6 +21,7 @@
 		grid[end_row][end_col] = grid[start_row][start_col];                                                \
 	}                                                                                                       \
 	else if(is_en_passant) {\
+				grid[end_row][end_col] = grid[start_row][start_col];\
 				grid[start_row][end_col].type = empty; /* delete enemy pawn if en passant */\
 	}\
 	else {                                                                                                  \
