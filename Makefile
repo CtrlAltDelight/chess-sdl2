@@ -1,5 +1,5 @@
-SRC_C:=main.c sdl_utils.c game.c
-SRC_H:=sdl_utils.h game.h
+SRC_C:=$(wildcard *.c)
+SRC_H:=$(wildcard *.h)
 OBJS:=$(SRC_C:.c=.o)
 CFLAGS:=-std=c11 -pedantic -Wvla -Wall -Wshadow -g
 SHELL:=/bin/bash
