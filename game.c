@@ -256,6 +256,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 		}
 		// castling
 		else if(abs(end_col - start_col) == 2 && piece.has_moved == false) {
+			// TODO fix castling through check
 			int step = (end_col > start_col) ? 1 : -1;
 			for(int curr_col = start_col + step; 0 < curr_col && curr_col < 7; curr_col += step) {
 				if(grid[start_row][curr_col].type != empty) {
