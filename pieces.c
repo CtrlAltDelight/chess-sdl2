@@ -1,12 +1,33 @@
 #include "game.h"
 #include "pieces.h"
 
+// This function is useful for simulating
+static bool is_enemy_attacking_square(Piece** grid, enum Color turn, int row, int col) {
+	// Evaluate if any pieces are attacking the square
+	bool is_attacking = false;
+	for(int i = 0; i < 8; i++) { // Go through each square in the grid
+		for(int j = 0; j < 8; j++) {
+			Piece curr_piece = grid[i][j];
+			if(curr_piece.color == turn) { // We only care about enemy pieces
+				continue;
+			}
+			is_attacking = check_valid_move(grid, curr_piece, (Move) {.type = rook}, i, j, row, col); // previous move doesn't matter
+			
+			// As soon as you find one piece that is attacking the square, return.
+			if(is_attacking) {
+				return is_attacking;
+			}
+		}
+	}
+	return is_attacking;
+}
+
 static bool is_not_check(Piece** grid, enum Color turn) {
 	// Find where king is at
 	int king_row;
 	int king_col;
 	for(int i = 0; i < 8; i++) {
-		bool found = false;
+		bool found = false; // flags if we have found the king
 		for(int j = 0; j < 8; j++) {
 			Piece curr_piece = grid[i][j];
 			if(curr_piece.type == king && curr_piece.color == turn) {
@@ -22,84 +43,50 @@ static bool is_not_check(Piece** grid, enum Color turn) {
 	}
 
 	// Evaluate if any pieces are attacking the king
-	bool is_check = false;
-	for(int i = 0; i < 8; i++) {
-		for(int j = 0; j < 8; j++) {
-			Piece curr_piece = grid[i][j];
-			if(curr_piece.color == turn) {
-				continue;
-			}
-			is_check = check_valid_move(grid, curr_piece, (Move) {.type = rook}, i, j, king_row, king_col); // previous move doesn't matter
-			if(is_check) {
-				break;
-			}
-		}
-		if(is_check) {
-			break;
-		}
-	}
-	return !is_check;
-}
-
-// This function is useful for simulating
-static bool enemy_is_attacking_square(Piece** grid, enum Color turn, int row, int col) {
-	// Evaluate if any pieces are attacking the square
-	bool is_attacking = false;
-	for(int i = 0; i < 8; i++) {
-		for(int j = 0; j < 8; j++) {
-			Piece curr_piece = grid[i][j];
-			if(curr_piece.color == turn) {
-				continue;
-			}
-			is_attacking = check_valid_move(grid, curr_piece, (Move) {.type = rook}, i, j, row, col); // previous move doesn't matter
-			if(is_attacking) {
-				break;
-			}
-		}
-		if(is_attacking) {
-			break;
-		}
-	}
-	return !is_attacking;
+	return !is_enemy_attacking_square(grid, turn, king_row, king_col);
 }
 
 bool check_pawn_move(Piece** grid, Piece piece, Move previous_move, int start_row, int start_col, int end_row, int end_col) {
-		// Color matters
-		int color_modifier = (piece.color == white) ? 1 : -1;
-		bool is_en_passant = previous_move.col == end_col && previous_move.type == pawn && abs(previous_move.col - start_col) == 1 && ((end_row == 2 && previous_move.row == 3 && piece.color == black) || (end_row == 5 && previous_move.row == 4 && piece.color == white));
+	// Color matters
+	int color_modifier = (piece.color == white) ? 1 : -1;
 
-		// One square forward
-		if(end_row == start_row + color_modifier * 1 && end_col == start_col && grid[end_row][end_col].type == empty) {
-			// Promotion
-			if(end_row == 7 || end_row == 0) {
-				grid[start_row][start_col].type = queen;
-				simulate_board_state_and_return_is_valid(true, false, false);
-			}
+	// Check if this is an en passant attempt
+	bool is_en_passant = previous_move.col == end_col && previous_move.type == pawn && abs(previous_move.col - start_col) == 1 && ((end_row == 2 && previous_move.row == 3 && piece.color == black) || (end_row == 5 && previous_move.row == 4 && piece.color == white));
 
-			simulate_board_state_and_return_is_valid(false, false, false);
-		}
-		
-		// Two squares forward
-		else if(piece.has_moved == false && end_row == start_row + color_modifier * 2 && end_col == start_col && grid[end_row][end_col].type == empty && grid[start_row + color_modifier][start_col].type == empty) {
-			simulate_board_state_and_return_is_valid(false, false, false);
+	// TODO See if there is a better way to check for promotion
+	
+	// One square forward
+	if(end_row == start_row + color_modifier * 1 && end_col == start_col && grid[end_row][end_col].type == empty) {
+		// Promotion
+		if(end_row == 7 || end_row == 0) {
+			grid[start_row][start_col].type = queen;
+			simulate_board_state_and_return_is_valid(true, false, false);
 		}
 
-		// Capture
-		else if(end_row == start_row + color_modifier * 1 && (end_col == start_col + 1 || end_col == start_col - 1) && (grid[end_row][end_col].type != empty || is_en_passant)) {
-			// en passant
-			if(is_en_passant) {
-				simulate_board_state_and_return_is_valid(false, false, true);
-			}
+		simulate_board_state_and_return_is_valid(false, false, false);
+	}
+	
+	// Two squares forward
+	else if(piece.has_moved == false && end_row == start_row + color_modifier * 2 && end_col == start_col && grid[end_row][end_col].type == empty && grid[start_row + color_modifier][start_col].type == empty) {
+		simulate_board_state_and_return_is_valid(false, false, false);
+	}
 
-			// Promotion
-			else if(end_row == 7 || end_row == 0) {
-				//grid[start_row][start_col].type = queen;
-				simulate_board_state_and_return_is_valid(true, false, false);
-			}
-
-			simulate_board_state_and_return_is_valid(false, false, false);
+	// Capture
+	else if(end_row == start_row + color_modifier * 1 && (end_col == start_col + 1 || end_col == start_col - 1) && (grid[end_row][end_col].type != empty || is_en_passant)) {
+		// en passant
+		if(is_en_passant) {
+			simulate_board_state_and_return_is_valid(false, false, true);
 		}
-		return false;
+
+		// Promotion
+		else if(end_row == 7 || end_row == 0) {
+			//grid[start_row][start_col].type = queen;
+			simulate_board_state_and_return_is_valid(true, false, false);
+		}
+
+		simulate_board_state_and_return_is_valid(false, false, false);
+	}
+	return false;
 }
 
 
@@ -161,13 +148,24 @@ bool check_king_move(Piece** grid, Piece piece, Move previous_move, int start_ro
 	}
 	// castling
 	else if(abs(end_col - start_col) == 2 && piece.has_moved == false) {
-		// TODO fix castling through check
+		// Get direction of the travel
 		int step = (end_col > start_col) ? 1 : -1;
+		
+		// Make sure there is only empty space between the king and the rook
 		for(int curr_col = start_col + step; 0 < curr_col && curr_col < 7; curr_col += step) {
 			if(grid[start_row][curr_col].type != empty) {
 				return false;
 			}
 		}
+
+		// Make sure you are not in check or traveling through check
+		if(!is_not_check(grid, piece.color)                                               ||
+				is_enemy_attacking_square(grid, piece.color, start_row, start_col + step) ||
+				is_enemy_attacking_square(grid, piece.color, start_row, start_col + 2 * step)) {
+			return false;
+		}
+
+		// Make sure the rooks are in the right spot and have not moved yet
 		bool is_left_rook_available  = grid[start_row][0].type == rook && grid[start_row][0].has_moved == false;
 		bool is_right_rook_available = grid[start_row][7].type == rook && grid[start_row][7].has_moved == false;
 		if((step == 1 && is_right_rook_available) || (step == -1 && is_left_rook_available)) {
@@ -197,7 +195,7 @@ bool check_valid_move(Piece** grid, Piece piece, Move previous_move, int start_r
 	}
 }
 
-// This function is the only one that changes the board
+// This function is the only function that changes the board
 void move_piece(Piece** grid, enum Color* a_turn, Move* a_previous_move, int orig_row, int orig_col, int row, int col) {
 	// Do nothing if there is no move
 	if(orig_row == row && orig_col == col) {
@@ -213,3 +211,4 @@ void move_piece(Piece** grid, enum Color* a_turn, Move* a_previous_move, int ori
 	*a_previous_move = (Move) { .type = grid[row][col].type, .color = *a_turn, .row = row, .col = col, .is_check = false };
 	*a_turn = (*a_turn == white) ? black : white;
 }
+

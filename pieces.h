@@ -6,16 +6,17 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_timer.h>
 
-#define simulate_board_state_and_return_is_valid(is_promoting, is_castling, is_en_passant) do {                                      \
-	/* Make a temporary move */                                                                             \
+#define simulate_board_state_and_return_is_valid(is_promoting, is_castling, is_en_passant) do {             \
+	/* Make a temporary move to simulate board state */                                                     \
 	Piece temp = grid[end_row][end_col];                                                                    \
 	if(is_promoting) {                                                                                      \
 		grid[end_row][end_col].type = queen;                                                                \
 	}                                                                                                       \
 	else if(is_castling) {                                                                                  \
-		int mod = (end_col - start_col > 0) ? 1 : -1;                                                       \
+		/* Check if enemy is currently attacking king or the two squares the king moves through */          \
+		int mod = (end_col - start_col > 0) ? 1 : -1; /* which direction the king is castling */            \
 		grid[end_row][start_col + mod] = (Piece) { .type = rook, .color = piece.color, .has_moved = true }; \
-		if(mod == 1) {                                                                                      \
+		if(mod >= 1) {                                                                                      \
 			grid[end_row][7].type = empty;                                                                  \
 		}                                                                                                   \
 		else {                                                                                              \
@@ -54,7 +55,7 @@
 	}                                                                                                       \
 	grid[end_row][end_col] = temp;                                                                          \
                                                                                                             \
-	/* Either commit to move or cancel. */                                                                  \
+	/* Either commit to move if valid, or cancel. */                                                        \
 	if(is_valid) {                                                                                          \
 		return true;                                                                                        \
 	}                                                                                                       \

@@ -37,9 +37,23 @@ int main(int argc, char* argv[]) {
 		return EXIT_FAILURE;
 	}
 
-	// Run game
+	// Initializations for game
 	Piece** grid = init_grid();
-	for(bool is_done = false; !is_done; is_done = process_game_logic(renderer, textures, grid));
+
+	// Run game
+	const int FPS = 144; // Desired framerate
+	const int frameDelay = 1000 / FPS; // Delay in miliseconds for each frame
+	for(bool is_done = false; !is_done; is_done = process_game_logic(renderer, textures, grid)) {
+		uint32_t frameStart = SDL_GetTicks(); // Capture start time of frameStart
+
+		uint32_t frameTime = SDL_GetTicks() - frameStart; // Calculate how long the frame took
+
+		if(frameDelay > frameTime) {
+			SDL_Delay(frameDelay - frameTime);
+		}
+	}
+
+	// Cleanup from game
 	destroy_grid(grid);
 
 	// SDL cleanup
